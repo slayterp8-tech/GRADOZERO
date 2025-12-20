@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ZEROFUEGO - Servicio profesional de recarga, mantenimiento y venta de extintores a domicilio en Bogotá. Cumplimos normas NTC y NFPA."/>
+  <title>GRADOZERO | Recarga y Mantenimiento de Extintores en Bogotá</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root{
+      --primary: #cccc00;        /* Amarillo suave para acentos */
+      --text-primary: #333333;   /* Gris oscuro principal */
+      --text-secondary: #555555; /* Gris medio */
+      --text-light: #777777;     /* Gris claro */
+      --bg-light: #ffffff;       /* Fondo blanco */
+      --card-bg: #f8f8f8;        /* Fondo tarjetas sutil */
+      --border: #eeeeee;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Roboto',sans-serif;
+      color:var(--text-primary);
+      background:var(--bg-light);
+      line-height:1.6;
+    }
+    header{
+      background:#ffffff;
+      color:var(--text-primary);
+      padding:20px 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      width:100%;
+      z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
+      border-bottom:2px solid var(--primary);
+    }
+    .logo{
+      font-family:'Montserrat',sans-serif;
+      font-size:2.5rem;
+      font-weight:800;
+      color:var(--primary);
+    }
+    nav a{
+      color:var(--text-primary);
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    nav a:hover{
+      color:var(--primary);
+    }
+    .whatsapp-fixed{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:#fff;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2.5rem;
+      box-shadow:0 0 20px rgba(37,211,102,0.6);
+      z-index:999;
+      text-decoration:none;
+    }
+    .hero{
+      background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://grupocasalima.com/wp-content/uploads/2023/08/Venta-y-Recarga-de-Extintores.webp');
+      background-size:cover;
+      background-position:center;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      text-align:center;
+      padding:120px 20px 80px;
+      color:#ffffff;
+    }
+    .hero h1{
+      font-size:3.5rem;
+      margin-bottom:20px;
+      color:var(--primary);
+      text-shadow:0 0 15px rgba(204,204,0,0.6);
+    }
+    .hero p{
+      font-size:1.5rem;
+      max-width:800px;
+      margin:0 auto 40px;
+    }
+    .btn{
+      background:var(--primary);
+      color:#000;
+      padding:15px 40px;
+      font-size:1.2rem;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+      border:2px solid var(--primary);
+    }
+    .btn:hover{
+      background:transparent;
+      color:var(--primary);
+      box-shadow:0 0 20px rgba(204,204,0,0.4);
+    }
+    section{
+      padding:80px 5%;
+      text-align:center;
+    }
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+    .service-card{
+      background:var(--card-bg);
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.3s;
+      border:1px solid var(--border);
+    }
+    .service-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    }
+    .service-card img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:20px;
+    }
+    .service-card h3{
+      color:var(--primary);
+      margin-bottom:15px;
+    }
+    .about{
+      background:var(--card-bg);
+      padding:60px;
+      border-radius:15px;
+      max-width:900px;
+      margin:40px auto;
+      border:1px solid var(--border);
+    }
+    .about h2{
+      color:var(--primary);
+      margin-bottom:20px;
+    }
+    footer{
+      background:#f5f5f5;
+      color:var(--text-light);
+      padding:40px 5%;
+      text-align:center;
+      border-top:1px solid var(--border);
+    }
+    footer a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+    @media(max-width:768px){
+      header{flex-direction:column;}
+      nav{margin-top:20px;}
+      nav a{display:block;margin:10px 0;}
+      .hero h1{font-size:2.8rem;}
+      .hero p{font-size:1.3rem;}
+    }
+  </style>
+</head>
+<body>
 
+  <a href="https://wa.me/573022771677" class="whatsapp-fixed" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <header>
+    <div class="logo">ZEROFUEGO</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div>
+      <h1>Recarga y Mantenimiento de Extintores a Domicilio en Bogotá</h1>
+      <p>Servicio profesional, rápido y certificado. Protege tu hogar, empresa o vehículo con extintores en perfecto estado según normas NTC colombianas y NFPA.</p>
+      <a href="https://wa.me/573022771677" class="btn">Cotiza por WhatsApp ahora</a>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2 style="color:var(--primary);margin-bottom:20px;">Nuestros Servicios</h2>
+    <p>Ofrecemos soluciones completas en seguridad contra incendios en Bogotá.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://grupocasalima.com/wp-content/uploads/2023/08/Venta-y-Recarga-de-Extintores.webp" alt="Técnico recargando extintor a domicilio">
+        <h3>Recarga de Extintores</h3>
+        <p>Recarga de todo tipo: polvo químico seco (PQS), CO2, agua, espuma. Servicio anual obligatorio.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://profuego.es/wp-content/uploads/2023/03/como-hacer-el-mantenimiento-de-mi-extintor-en-empresa-o-en-hogar-grupo-profuego.png" alt="Mantenimiento e inspección de extintores">
+        <h3>Mantenimiento e Inspección</h3>
+        <p>Revisión, prueba hidrostática (cada 5-12 años) y certificación según norma NTC 2885.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://extintorespropama.com/wp-content/uploads/2018/05/EXTINTORES_PQS_001.jpg" alt="Venta y entrega de extintores nuevos">
+        <h3>Venta y Entrega a Domicilio</h3>
+        <p>Extintores nuevos para hogares, empresas y vehículos. Entrega gratis en Bogotá.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="about">
+      <h2>¿Quiénes Somos?</h2>
+      <p><strong>GRADOZERO</strong> es una empresa especializada en recarga, mantenimiento y venta de extintores en Bogotá. Contamos con técnicos certificados y cumplimos todas las normas de seguridad colombianas para garantizar tu protección.</p>
+      <p>
+        Teléfono / WhatsApp: <strong>+57 302 277 1677</strong><br>
+        Email: info@zerofuego.com<br>
+        Bogotá, Colombia
+      </p>
+      <p>¡Tu seguridad es nuestra prioridad!</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 style="color:var(--primary);">Contáctanos</h2>
+    <p>Estamos listos para ayudarte. Respuesta inmediata por WhatsApp.</p>
+    <br>
+    <a href="https://wa.me/573022771677" class="btn">WhatsApp +57 302 277 1677</a>
+  </section>
+
+  <footer>
+    <p><a href="https://wa.me/573022771677">WhatsApp: +57 302 277 1677</a> | Bogotá, Colombia</p>
+    <p>© 2025 GRADOZERO - Recarga y Mantenimiento de Extintores. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
